@@ -38,6 +38,73 @@
 - CSS3
 - JavaScript (ES6+)
 
+## 事前準備
+
+このプロジェクトをデプロイするには、以下のツールが必要です：
+
+### GitHub CLI (gh)のインストール
+
+GitHub CLIは、コマンドラインからGitHubの操作を行うためのツールです。以下の手順でインストールできます：
+
+#### Ubuntuの場合
+
+```bash
+# リポジトリの追加
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+
+# インストール
+sudo apt update
+sudo apt install gh
+```
+
+#### macOSの場合
+
+```bash
+# Homebrewを使用
+brew install gh
+```
+
+#### Windowsの場合
+
+```bash
+# Chocolateyを使用
+choco install gh
+
+# または、wingetを使用
+winget install --id GitHub.cli
+```
+
+### GitHub CLIの認証
+
+インストール後、以下のコマンドでGitHubアカウントにログインします：
+
+```bash
+gh auth login
+```
+
+プロンプトに従って認証を完了してください。
+
+### Gitのインストール
+
+Gitがまだインストールされていない場合は、以下のコマンドでインストールできます：
+
+#### Ubuntuの場合
+
+```bash
+sudo apt install git
+```
+
+#### macOSの場合
+
+```bash
+brew install git
+```
+
+#### Windowsの場合
+
+[Git for Windows](https://gitforwindows.org/)からインストーラーをダウンロードしてインストールします。
+
 ## GitHub Pagesへのデプロイプロセス
 
 このプロジェクトはGitHub Pagesを使用して公開されています。以下は、デプロイプロセスの詳細です。
